@@ -1,0 +1,129 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: auto;
+  background-color: black;
+  justify-content: center;
+  align-items: center;
+  font-family: Tahoma;
+}
+
+hr {
+  border: none;
+  width: auto;
+  height: 0.25vh;
+  background-color: #000;
+  border-radius: 0.5vh;
+}
+
+.title-section {
+  font-family: Tahoma;
+  font-size: 2.5vh;
+  margin: 0vh;
+  text-align: center;
+  align-items: center;
+}
+
+.title-section h1 {
+    margin: 1vh; /* Adjust this value to your desired margin */
+}
+.game-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.board {
+  width: 50vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.info {
+  align-items: center;
+  width: 50vh;
+  font-size: 14px;
+  font-family: Tahoma;
+  margin-top: 20px;
+}
+
+button {
+  font-family: Tahoma;
+  font-size: 2vh;
+  
+  margin-top: 0.1vh;
+  margin-bottom: 3vh;
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  
+  background-color: white;
+  color: #fff;
+  cursor: pointer;
+  color: #000;
+  border: #000 solid 0.25vh;
+  transition: all 0.3s ease;
+}
+
+
+
+button:hover {
+  background-color: black;
+  color: white;
+  
+}
+
+
+span {
+  font-size: 2vh;
+ 
+  
+}
+.move-history {
+  max-height: 10vh;
+  overflow-y: scroll;
+}
+
+
+/* Style the slider track */
+input[type=range] {
+    -webkit-appearance: none; /* Override default CSS styles */
+    width: 50vh; /* Full-width */
+    height: 1.5vh; /* Specified height */
+    border-radius: 5px;   
+    background: #d3d3d3; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+}
+
+/* Style the slider thumb */
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 2.5vh; /* Set a specific slider handle width */
+    height: 2.5vh; /* Slider handle height */
+    background: black; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+    border-radius: 50%; 
+}
+
+/* Style the slider thumb when mouse is pressed on it */
+input[type=range]:active::-webkit-slider-thumb {
+    background: gray; /* Change to a darker green color */
+}
+
+input[type=text] {
+  text-align: center;
+  justify-content: center;
+  width: 3vh;
+  font-family: Tahoma;
+    font-size: 2vh;
+  
+}
+
+.slidecontainer {
+ font-family: Tahoma;
+}

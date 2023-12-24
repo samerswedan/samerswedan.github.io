@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link rel="stylesheet" href="style.css" />
+  <head>
+    <title>Chess AI</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="lib/chessboardjs/css/chessboard-0.3.0.css" />
+  </head>
+  <body>
+    <div class="title-section"><h1>Chess AI</h1></div>
+
+    <div class="game-container">
+      
+        <div class ="boardandinfo"> 
+
+       <div id="board" class="board"></div>
+
+      <div class="info">
+        <button id="undo_btn" onclick="undo_move()">Undo</button>
+        <br />
+       <span>Search depth:
+        <select id="search-depth">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3" selected>3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+        </span>
+
+        <br />
+        <span>Positions evaluated: <span id="position-count"></span></span>
+        <br />
+        <span>Time: <span id="time"></span></span>
+        <br />
+        <span>Positions/s: <span id="positions-per-s"></span> </span>
+        <br />
+        <br />
+      
+
+     
+    
+      <hr />
+
+      </div>
+      <div class="slidecontainer">
+        Mobility Bias
+        <br />
+        <input
+          type="range"
+          min="0"
+          max="100"
+          value="50"
+          class="slider"
+          id="pawnSlider"
+        />
+        <input type="text" id="pawnValue" value="50" />
+        <br />
+        Defensive Structure Bias
+        <br />
+        <input
+          type="range"
+          min="0"
+          max="100"
+          value="50"
+          class="slider"
+          id="knightSlider"
+        />
+        <input type="text" id="knightValue" value="50" />
+        <br />
+        Bishop Value
+        <br />
+        <input
+          type="range"
+          min="0"
+          max="100"
+          value="30"
+          class="slider"
+          id="bishopSlider"
+        />
+        <input type="text" id="bishopValue" value="30" />
+        <br />
+        Rook Value
+        <br />
+        <input
+          type="range"
+          min="0"
+          max="100"
+          value="50"
+          class="slider"
+          id="rookSlider"
+        />
+        <input type="text" id="rookValue" value="50" />
+        <br />
+        Queen Value
+        <br />
+        <input
+          type="range"
+          min="0"
+          max="100"
+          value="90"
+          class="slider"
+          id="queenSlider"
+        />
+        <input type="text" id="queenValue" value="90" />
+        <script>
+          var slider = document.getElementById("pawnSlider");
+          var valueTxt = document.getElementById("pawnValue");
+
+          slider.oninput = function () {
+            valueTxt.value = slider.value;
+          };
+
+          valueTxt.onchange = function () {
+            slider.value = valueTxt.value;
+          };
+
+          var slider1 = document.getElementById("knightSlider");
+          var valueTxt1 = document.getElementById("knightValue");
+
+          slider1.oninput = function () {
+            valueTxt1.value = slider1.value;
+          };
+
+          valueTxt1.onchange = function () {
+            slider1.value = valueTxt1.value;
+          };
+
+          var slider2 = document.getElementById("bishopSlider");
+          var valueTxt2 = document.getElementById("bishopValue");
+
+          slider2.oninput = function () {
+            valueTxt2.value = slider2.value;
+          };
+
+          valueTxt2.onchange = function () {
+            slider2.value = valueTxt2.value;
+          };
+
+          var slider3 = document.getElementById("rookSlider");
+          var valueTxt3 = document.getElementById("rookValue");
+
+          slider3.oninput = function () {
+            valueTxt3.value = slider3.value;
+          };
+
+          valueTxt3.onchange = function () {
+            slider3.value = valueTxt3.value;
+          };
+
+          var slider4 = document.getElementById("queenSlider");
+          var valueTxt4 = document.getElementById("queenValue");
+
+          slider4.oninput = function () {
+            valueTxt4.value = slider4.value;
+          };
+
+          valueTxt4.onchange = function () {
+            slider4.value = valueTxt4.value;
+          };
+        </script>
+      </div>
+      <br />
+      <br />
+      <div id="move-history" class="move-history"></div>
+    </div>
+    <script src="lib/jquery/jquery-3.2.1.min.js"></script>
+    <script src="lib/chessboardjs/js/chess.js"></script>
+    <script src="lib/chessboardjs/js/chessboard-0.3.0.js"></script>
+    <script src="script.js"></script>
+
+    <script></script>
+  </body>
+</html>
